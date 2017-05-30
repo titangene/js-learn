@@ -12,6 +12,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - [路線規劃](https://developers.google.com/maps/documentation/javascript/directions?hl=zh-tw#UnitSystems)：[Travel modes in directions Demo](https://developers.google.com/maps/documentation/javascript/examples/directions-travel-modes?hl=zh-tw) , [Place Autocomplete and Directions Demo](https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-directions?hl=zh-tw)
 - Geolocation
 
+## [0.1.1] - 2017-05-30
+### Changed
+- [[Demo](https://codepen.io/titangene/pen/aWgybx)] [split string into array with "\n" & string reverse sort](https://github.com/titangene/js-learn/blob/master/other/string_reverse_sort.html)
+    - comment demo code
+
 ## [0.1.0] - 2017-05-30
 ### Added
-- [[Demo](https://github.com/titangene/js-learn/other/string_reverse_sort.html)] split string into array with "\n" & string reverse sort
+- [[Demo](https://codepen.io/titangene/pen/aWgybx)] [split string into array with "\n" & string reverse sort](https://github.com/titangene/js-learn/blob/master/other/string_reverse_sort.html)

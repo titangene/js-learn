@@ -24,11 +24,11 @@ var text, result, arr, temp = [];
 document.onkeyup = e => {if((e.keyCode || e.which) == 17) sort();}
 
 function sort() {
-    // Demo a~
-    for (var i = 97; i <= 109; i++) {
-        var s = String.fromCharCode(i);
-        document.getElementById("text").value += i == 109 ? s+s+s+s+s : s+s+s+s+s + "\n";
-    }
+    // Demo a~m
+    // for (var i = 97; i <= 109; i++) {
+    //     var s = String.fromCharCode(i);
+    //     document.getElementById("text").value += i == 109 ? s+s+s+s+s : s+s+s+s+s + "\n";
+    // }
 
     // Split string into array with "\n"
     arr = document.getElementById("text").value.split("\n");
