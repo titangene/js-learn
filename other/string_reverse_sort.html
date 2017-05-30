@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>split string into array with "\n" & string reverse sort</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif, Microsoft JhengHei;}
+button {font-size: 30px; padding: 8px 28px;}
+div {display: inline-block;}
+p {text-align: center; font-size: 20px; margin: 6px 0;}
+</style>
+</head>
+
+<body>
+<h2>split string into array with "\n" & string reverse sort</h2>
+<button onclick="sort()">Sort (Ctrl)</button><br>
+<div><p>Origin</p><textarea id="text" rows="14" cols="10"></textarea></div>
+<div><p>Result</p><textarea id="result" rows="14" cols="10"></textarea></div>
+
+<script>
+var text, result, arr, temp = [];
+// Key Ctrl
+document.onkeyup = e => {if((e.keyCode || e.which) == 17) sort();}
+
+function sort() {
+    // Demo a~
+    for (var i = 97; i <= 109; i++) {
+        var s = String.fromCharCode(i);
+        document.getElementById("text").value += i == 109 ? s+s+s+s+s : s+s+s+s+s + "\n";
+    }
+
+    // Split string into array with "\n"
+    arr = document.getElementById("text").value.split("\n");
+    result = document.getElementById("result");
+    temp = [], result.value = "";   // Clear
+
+    for (var i = arr.length - 1; i >= 0; i--)   // Reverse sort
+        temp[arr.length - 1 - i] = arr[i];
+
+    for (var i = 0; i < temp.length; i++)
+        result.value += temp[i] + "\n";
+        
+    console.log(temp);
+}
+</script>
+</body>
+</html>
