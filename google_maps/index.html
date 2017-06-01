@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Map</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<script src="./../js/jquery-3.2.1.min.js"></script>
+<script src="./map.js"></script>
+<link rel="stylesheet" href="./../css/bootstrap.min.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+<div id="map"></div>
+<div id="omnibox">
+    <div id="searchbox" role="search" class="searchbox suggestions-shown">
+        <form id="searchbox_form" name="searchNearBy" onsubmit="return nearBySearch()">
+            <input autofocus="autofocus" aria-label="搜尋附近地點" id="keyword" name="keyword" placeholder="搜尋附近地點">
+            <select id="radius" name="radius" aria-label="尋找半徑 (m)">
+                <option value="500" selected>500</option>
+                <option value="1000">1000</option>
+                <option value="1500">1500</option>
+                <option value="2000">2000</option>
+                <option value="2000">2500</option>
+            </select>
+        </form>
+        <div class="searchbox-searchbtn-container">
+            <button aria-label="搜尋" id="searchbox-searchbtn" onclick="nearBySearch()"></button>
+        </div>
+        <select id="planRouteMode" aria-label="交通">
+            <option value="DRIVING">開車</option>
+            <option value="WALKING">步行</option>
+            <option value="BICYCLING">單車</option>
+            <option value="TRANSIT">大眾運輸</option>
+        </select>
+    </div>
+    <!--
+    <div class="place_suggestions">
+        <ul class="place_list">
+            <li>
+                <div class="suggest">
+                    <div class="suggest-icon-container"></div>
+                    <span class="suggest-query">安平老街</span>
+                    <span>台南市安平區延平街延平街延平街延平街延平街延平街</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    -->
+</div>
+<div id="getLocation">
+    <div class="btn-getLocation" onClick="getLocation(() => {}, false)">
+        <i class="material-icons">my_location</i>
+    </div>
+</div>
+
+<div class="panel panel-success">
+    <div class="panel-heading"><h4>查詢結果</h4> <span id="myLocation"></span></div>
+    <div class="panel-body">
+        <div id="place-list" class="list-group" style="margin-bottom: 0;">
+            <li href="#" class="list-group-item" onClick="placeMarker(place)">還未搜尋：無結果</li>
+        </div>
+    </div>
+</div>
+
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB612CzPHSUfzHAwltHsHBK3-sXYh48418&libraries=places&callback=initMap"
+async defer></script>
+</body>
+</html>

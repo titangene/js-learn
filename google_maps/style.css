@@ -1,0 +1,270 @@
+/* Optional: Makes the sample page fill the window. */
+html, body {height: 100%; margin: 0; padding: 0;}
+
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {width: calc(100% - 350px); height: 100%;}
+#planRouteMode {
+    width: 78px;
+    height: 24px;
+    line-height: 24px;
+    border: none;
+    outline: none;
+    float: right;
+}
+
+#getLocation {
+    width: auto;
+    height: 38px;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    position: absolute;
+    right: 355px;
+    bottom: 120px;
+}
+.btn-getLocation {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: #fff;
+    width: 28px;
+    height: 28px;
+    right: 0;
+    bottom: 5px;
+}
+.btn-getLocation i {
+    position: relative;
+    top: 4px;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    color: #666;
+}
+#myLocation {font-size: 12px; vertical-align: text-top;}
+@media (max-width: 992px) and (min-width: 520px) {
+    #map {width: 100%; height: 500px;}
+    #getLocation {top: 341px; right: 5px;}
+}
+@media (max-width: 520px) {
+    #map {width: 100%; height: 350px;}
+    #getLocation {top: 192px; bottom: 0; right: 5px;}
+}
+
+.badge-gray {background: #bdbdbd;}
+.badge-darkgreen {background: #00c853;}
+.badge-lightgreen {background: #64dd17;}
+.badge-yellow {background: #ffca00;}
+.badge-orange {background: #ff8300;}
+.badge-red {background: #f00;}
+.rating {
+    width: 32px;
+    height: 20px;
+    line-height: 20px;
+    padding: 1px;
+}
+.placeName {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-line;
+    height: 16px;
+    width: 255px;
+    display: block;
+}
+.panel-body {
+    overflow-y: scroll;
+    width: 350px;
+    position: relative;
+    height: calc(100% - 70px);
+    padding: 0;
+}
+.panel-success {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    border: none;
+}
+.panel-heading {
+    background-color: #4285f4 !important;
+    color: #fff !important;
+    border: none;
+    padding: 11px 15px 9px 15px;
+    width: 350px;
+    height: 70px;
+}
+.panel-heading h4 {margin: 6px 0;}
+.panel, .panel-heading, .list-group-item:last-child, .list-group-item:first-child {
+    border-radius: 0;
+}
+.list-group-item {
+    height: 40px;
+    margin-bottom: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+@media (max-width: 992px) and (min-width: 520px) {
+    form .form-group {float: left;}
+    form .form-group:nth-child(2) {margin-left: 10px;}
+    .form-control {display: inline-block; width: auto;}
+    .panel-success {
+        position: static;
+        right: inherit;
+        top: inherit;
+        bottom: inherit;
+        height: calc(100% - 500px);
+    }
+    .panel-heading {width: 100%;}
+    .panel-body {width: 100%; position: static;}
+}
+
+@media (max-width: 520px) {
+    .panel-success {
+        position: static;
+        right: inherit;
+        top: inherit;
+        bottom: inherit;
+        height: calc(100% - 350px);
+    }
+    .panel-heading {width: 100%;}
+    .panel-body {width: 100%; position: static;}
+}
+
+#origin-input, #destination-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 200px;
+}
+
+#origin-input:focus, #destination-input:focus {border-color: #4d90fe;}
+
+#mode-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  margin-left: 12px;
+  padding: 5px 11px 0px 11px;
+}
+
+#mode-selector label {font-size: 13px;}
+
+input::-moz-placeholder{color:#999;opacity:1}
+input:-ms-input-placeholder{color:#999}
+input::-webkit-input-placeholder{color:#999}
+#omnibox {position: absolute; margin: 10px; z-index: 10; top: 0;}
+#searchbox_form {display: inline-block;}
+.searchbox.suggestions-shown {border-radius: 2px 2px 0 0;}
+.searchbox {
+    position: relative;
+    background: #fff;
+    border-radius: 2px;
+    box-sizing: border-box;
+    width: 424px;
+    height: 48px;
+    border-bottom: 1px solid transparent;
+    padding: 12px 2px 11px 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
+}
+.searchbox #radius {
+    border: none;
+    outline: none;
+    font-size: 15px;
+    width: 56px;
+    height: 24px;
+    line-height: 24px;
+}
+.searchbox #keyword {
+    border: none;
+    padding: 0;
+    outline: none;
+    font-size: 15px;
+    width: 210px;
+    height: 24px;
+    line-height: 24px;
+}
+.searchbox-searchbtn-container {position: absolute; right: 84px; top: 0;}
+.searchbox-searchbtn-container::before, .searchbox-searchbtn-container::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    border-left: 1px solid #ddd;
+    height: 28px;
+}
+.searchbox-searchbtn-container::after {right: 0;}
+#searchbox-searchbtn {
+    display: block;
+    cursor: pointer;
+    padding: 12px;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    list-style: none;
+}
+#searchbox-searchbtn::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(https://maps.gstatic.com/tactile/omnibox/quantum_search_button-20150825-1x.png);
+}
+
+@media (max-width: 520px) {
+    #omnibox {margin: 0 auto; width: 100%;}
+    .searchbox {width: 100%; height: 40px; padding: 8px 4px 8px 8px;}
+    #searchbox_form {width: calc(100% - 130px);}
+    .searchbox #keyword {width: calc(100% - 60px);}
+    #searchbox-searchbtn {padding: 8px 10px;}
+    .searchbox-searchbtn-container {position: absolute; right: 88px; top: 0;}
+    .searchbox-searchbtn-container::before, .searchbox-searchbtn-container::after {top: 6px;}
+}
+
+.place_suggestions {
+    background-color: #fff;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-size: 15px;
+    overflow: hidden;
+    width: 400px;
+    position: relative;
+}
+ul.place_list {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    list-style: none;
+}
+ul.place_list li:last-child .suggest {border-radius: 0 0 2px 2px;}
+.suggest {
+    position: relative;
+    color: #8C8C8C;
+    font-size: 12px;
+    line-height: 24px;
+    min-height: 24px;
+    padding: 6px 6px 7px 0;
+    border-top: 1px solid #e6e6e6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.suggest-icon-container {
+    float: left;
+    margin: 0 16px;
+    background: no-repeat url(https://maps.gstatic.com/tactile/icons/suggest-7a1f96ff5ef6dd5f140f448ec355ab82.png) 0 -208px;
+    height: 24px;
+    width: 24px;
+}
+.suggest-query {color: #000; font-weight: 500;}
+#content {font-family: Arial, Microsoft JhengHei; max-width: 257px;}
+#bodyContent ul {padding-left: 18px; margin-bottom: 0;}
+#firstHeading {font-weight: bold;}
