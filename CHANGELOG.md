@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- Git Comparing changes
+
 ## [0.2.0] - 2017-05-31
 ### Added
 - Google maps
@@ -28,3 +32,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - [[Demo](https://codepen.io/titangene/pen/aWgybx)] [split string into array with "\n" & string reverse sort](https://github.com/titangene/js-learn/blob/master/other/string_reverse_sort.html)
 - README add "split string into array with "\n" & string reverse sort" Note
+
+[Unreleased]: https://github.com/titangene/js-learn/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/titangene/js-learn/compare/v0.1.1...v0.2.0
+[0.1.1]: https://github.com/titangene/js-learn/compare/v0.1.0...v0.1.1
