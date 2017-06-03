@@ -5,7 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+## Changed
 - Clear "Google maps" project Note
+- CHANGELOG.md: Git Comparing changes version mistake
 
 ## [0.3.0] - 2017-06-03
 ### Added
@@ -39,7 +41,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - [[Demo](https://codepen.io/titangene/pen/aWgybx)] [split string into array with "\n" & string reverse sort](https://github.com/titangene/js-learn/blob/master/other/string_reverse_sort.html)
 - README add "split string into array with "\n" & string reverse sort" Note
 
-[Unreleased]: https://github.com/titangene/js-learn/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/titangene/js-learn/compare/v0.3.0...HEAD
 [0.3.0]: https://github.com/titangene/js-learn/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/titangene/js-learn/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/titangene/js-learn/compare/v0.1.0...v0.1.1
