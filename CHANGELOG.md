@@ -1,11 +1,11 @@
-# Change Log
+﻿# Change Log
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
-## Changed
+### Changed
 - Clear "Google maps" project Note
 - CHANGELOG.md: Git Comparing changes version mistake
 
@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Git Comparing changes
 
-## Changed
+### Changed
 - "Google maps" project independent into [google-maps-js](https://github.com/titangene/google-maps-js/)
 
 ## [0.2.0] - 2017-05-31
@@ -28,7 +28,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - js/jquery-3.2.1.min.js
 - .gitignore
 
-## Changed
+### Changed
 - README add "Google maps" Note
 
 ## [0.1.1] - 2017-05-30
